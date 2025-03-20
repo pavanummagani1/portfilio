@@ -1,0 +1,197 @@
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+/* Header Styling */
+header {
+  width: 100%;
+  background-color: #333;
+  color: white;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+a{
+  text-decoration: none;
+}
+/* Navbar Styling */
+.largeScreenNavbar {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.titleContainer img {
+  width: 150px; /* Adjust logo size */
+  height: 50px;
+  border-radius: 50%;
+}
+
+.itemContainers {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+.nav-item {
+  list-style: none;
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  transition: color 0.3s ease-in-out;
+}
+
+.nav-item:hover {
+  color: #f4a261;
+}
+
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Sidebar Styling */
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: -250px;
+  width: 250px;
+  height: 100%;
+  background: #222;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  padding-top: 20px;
+  transition: 0.3s ease-in-out;
+}
+
+.sidebar a {
+  color: white;
+  text-decoration: none;
+  padding: 15px;
+  display: block;
+  font-size: 18px;
+}
+
+.sidebar span {
+  font-size: 24px;
+  padding: 15px;
+  cursor: pointer;
+  color: white;
+}
+
+/* Banner Section */
+.bannerImages {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* Prevent overflow */
+  padding: 20px 0;
+}
+
+.bannerImage {
+  width: 100%;
+  max-width: 1200px;
+  height: auto;
+  display: block;
+}
+
+/* Responsive Design with Media Queries */
+
+/* Mini Phones (320px - 480px) */
+@media (max-width: 480px) {
+  .itemContainers {
+      display: none; /* Hide navbar items */
+  }
+
+  .hamburger {
+      display: block;
+  }
+
+  .sidebar {
+      width: 100%;
+      right: -100%;
+  }
+
+  .sidebar.open {
+      right: 0;
+  }
+
+  .bannerImage {
+      width: 100%;
+      height: auto;
+  }
+}
+
+/* Phones (481px - 768px) */
+@media (max-width: 768px) {
+  .itemContainers {
+      display: none;
+  }
+
+  .hamburger {
+      display: block;
+  }
+
+  .sidebar {
+      width: 60%;
+  }
+}
+
+/* Tablets & iPads (769px - 1024px) */
+@media (max-width: 1024px) {
+  .itemContainers {
+      gap: 15px;
+  }
+
+  .nav-item {
+      font-size: 14px;
+  }
+
+  .bannerImage {
+      max-width: 900px;
+  }
+}
+
+/* Mini Laptops (1025px - 1366px) */
+@media (max-width: 1366px) {
+  .titleContainer img {
+      width: 130px;
+  }
+
+  .nav-item {
+      font-size: 15px;
+  }
+
+  .bannerImage {
+      max-width: 1000px;
+  }
+}
+
+/* Laptops (1367px - 1600px) */
+@media (max-width: 1600px) {
+  .bannerImage {
+      max-width: 1100px;
+  }
+}
+
+/* Desktops (Above 1600px) */
+@media (min-width: 1601px) {
+  .bannerImage {
+      max-width: 1200px;
+  }
+}

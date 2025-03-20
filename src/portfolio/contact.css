@@ -1,0 +1,97 @@
+/* Contact Section */
+#contactme {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+/* Form Styling */
+form {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    padding: 20px;
+    background: #f5f5f5;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+.formtitle {
+    font-size: 24px;
+    font-weight: bold;
+    color: #222;
+    display: block;
+    margin: 15px;
+    text-align: center;
+}
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+textarea {
+    resize: none;
+}
+
+input[type="submit"] {
+    background-color: #007BFF;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Contact Image */
+.contactImage {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.contactImg {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* MEDIA QUERIES */
+
+/* Hide Contact Image on Mini Phones, Phones, Tablets, and iPads */
+@media (max-width: 1024px) {
+    #contactme {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .contactImage {
+        display: none;
+    }
+
+    form {
+        max-width: 90%;
+    }
+}
+
+/* Mini Laptops, Laptops & Desktops */
+@media (min-width: 1025px) {
+    #contactme {
+        flex-direction: row;
+    }
+
+    .contactImage {
+        display: flex;
+    }
+}
